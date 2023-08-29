@@ -21,9 +21,19 @@ class _CreateNoteState extends State<CreateNote> {
               fontSize: 28,
             ),
             decoration: const InputDecoration(
-                border: InputBorder.none, hintText: "Title"),
+              border: InputBorder.none,
+              hintText: "Title",
+            ),
           ),
-          TextFormField(),
+          TextFormField(
+            style: const TextStyle(
+              fontSize: 18,
+            ),
+            decoration: const InputDecoration(
+              border: InputBorder.none,
+              hintText: "Description",
+            ),
+          ),
         ],
       ),
     );
