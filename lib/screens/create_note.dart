@@ -14,27 +14,33 @@ class _CreateNoteState extends State<CreateNote> {
       appBar: AppBar(
         title: const Text("New Note"),
       ),
-      body: Column(
-        children: [
-          TextFormField(
-            style: const TextStyle(
-              fontSize: 28,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            TextFormField(
+              style: const TextStyle(
+                fontSize: 28,
+              ),
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                hintText: "Title",
+              ),
             ),
-            decoration: const InputDecoration(
-              border: InputBorder.none,
-              hintText: "Title",
+            const SizedBox(
+              height: 10,
             ),
-          ),
-          TextFormField(
-            style: const TextStyle(
-              fontSize: 18,
+            TextFormField(
+              style: const TextStyle(
+                fontSize: 18,
+              ),
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                hintText: "Description",
+              ),
             ),
-            decoration: const InputDecoration(
-              border: InputBorder.none,
-              hintText: "Description",
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
