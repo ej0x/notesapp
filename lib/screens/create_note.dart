@@ -8,6 +8,8 @@ class CreateNote extends StatefulWidget {
 }
 
 class _CreateNoteState extends State<CreateNote> {
+  final titleController = TextEditingController();
+  final boodyController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +21,7 @@ class _CreateNoteState extends State<CreateNote> {
         child: Column(
           children: [
             TextFormField(
+              controller: titleController,
               style: const TextStyle(
                 fontSize: 28,
               ),
@@ -31,6 +34,7 @@ class _CreateNoteState extends State<CreateNote> {
               height: 10,
             ),
             TextFormField(
+              controller: boodyController,
               style: const TextStyle(
                 fontSize: 18,
               ),
