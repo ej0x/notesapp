@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:notesapp/models/note_moder.dart';
 
 class NoteView extends StatelessWidget {
-  const NoteView({super.key, required this.note, required this.index});
+  const NoteView(
+      {super.key,
+      required this.note,
+      required this.index,
+      required this.onNoteDeleted});
 
   final Note note;
   final int index;
+
+  final Function(int) onNoteDeleted;
 
   @override
   Widget build(BuildContext context) {

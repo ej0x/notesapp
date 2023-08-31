@@ -7,6 +7,7 @@ class NoteCard extends StatelessWidget {
 
   final Note note;
   final int index;
+  final Function(int) onNoteDeleted;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,11 @@ class NoteCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => NoteView(note: note, index: index),
+            builder: (context) => NoteView(
+              note: note,
+              index: index,
+              onNoteDeleted: () {},
+            ),
           ),
         );
       },
