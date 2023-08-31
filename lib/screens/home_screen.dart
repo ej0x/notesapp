@@ -48,7 +48,9 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const CreateNote(),
+              builder: (context) => CreateNote(
+                onNewNoteCreated: onNewNoteCreated,
+              ),
             ),
           );
         },
@@ -57,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void onNewNoteCreato(Note note) {
+  void onNewNoteCreated(Note note) {
     notes.add(note);
     setState(() {});
   }
